@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col">
+    <p>Introduce el presupuesto total</p>
+    <input type="number" name="presupuesto" class="form-control"
+            placeholder="Presupuesto total" [(ngModel)]="presupuesto">
+    <button (click)="calcularPresupuestos()" class="btn btn-primary form-control">Calcular presupuestos</button>
+    <div *ngIf="mostrar" style="text-align: center;">
+      <label>Presupuesto urgencias = <strong>{{presupuesto_urg}} €</strong></label> <br>
+      <label>Presupuesto pediatría = <strong>{{presupuesto_ped}} €</strong></label> <br>
+      <label>Presupuesto traumatología = <strong>{{presupuesto_trau}} €</strong></label>
+    </div>
+  </div>
+</div>

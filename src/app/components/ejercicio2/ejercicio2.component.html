@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col">
+    <label for="base">Introduce aquí la base del triángulo</label>
+    <input class="form-control" type="number" name="base" placeholder="Base" [(ngModel)]="base">
+    <label for="altura">Introduce aquí la altura del triángulo</label>
+    <input class="form-control" type="number" name="altura" placeholder="Altura" [(ngModel)]="altura">
+    <button (click)="calcularArea()" class="form-control btn btn-primary">Calcular área</button>
+    <ul *ngIf="hayResultado" class="list-group">
+      <p>{{resultado}}</p>
+    </ul>
+  </div>
+</div>

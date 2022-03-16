@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col">
+    <p>Introduce las longitudes de los cuatro lados del rectángulo</p>
+    <input class="form-control" type="number" name="lado1"
+            placeholder="Longitud del lado 1" [(ngModel)]="lado1">
+    <input class="form-control" type="number" name="lado2"
+            placeholder="Longitud del lado 2" [(ngModel)]="lado2">
+    <input class="form-control" type="number" name="lado3"
+            placeholder="Longitud del lado 3" [(ngModel)]="lado3">
+    <input class="form-control" type="number" name="lado4"
+            placeholder="Longitud del lado 4" [(ngModel)]="lado4">
+    <button (click)="calcularPerimetro()" class="form-control btn btn-primary">Calcular área</button>
+    <ul *ngIf="hayResultado" class="list-group">
+      <p>{{resultado}}</p>
+    </ul>
+  </div>
+</div>

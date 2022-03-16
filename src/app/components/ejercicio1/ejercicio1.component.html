@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col">
+    <p>Introduce dos numeros para obtener la suma, la resta, la multiplicaión y la división</p>
+    <input class="form-control" type="number" name="num1" placeholder="Numero 1" [(ngModel)]="num1">
+    <input class="form-control" type="number" name="num2" placeholder="Numero 2" [(ngModel)]="num2">
+    <button (click)="calcular()" class="form-control btn btn-primary">Calcular</button>
+    <ul *ngIf="hayResultado" class="list-group">
+      <p>Resultados: <br> </p>
+      <li class="list-group-item">{{res_suma}}</li>
+      <li class="list-group-item">{{res_resta}}</li>
+      <li class="list-group-item">{{res_multi}}</li>
+      <li class="list-group-item">{{res_div}}</li>
+    </ul>
+  </div>
+</div>

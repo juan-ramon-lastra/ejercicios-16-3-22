@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-6">
+    <p>Introduce empleado</p>
+    <form (ngSubmit)="guardarEmpleado()">
+      <input type="text" name="nombre" class="form-control"
+              placeholder="Nombre empleado" [(ngModel)]="empleado.nombre">
+      <input type="text" name="edad" class="form-control"
+              placeholder="Edad empleado" [(ngModel)]="empleado.edad">
+      <input type="text" name="email" class="form-control"
+              placeholder="Email empleado" [(ngModel)]="empleado.email">
+      <input type="text" name="telefono" class="form-control"
+              placeholder="Telefono empleado" [(ngModel)]="empleado.telefono">
+      <input type="text" name="sueldo" class="form-control"
+              placeholder="Sueldo empleado" [(ngModel)]="empleado.sueldo">
+      <br>
+      <button class="btn btn-primary" type="submit">Guardar</button>
+    </form>
+    <p *ngIf="sueldoMayor>0">
+      Empleado con mayor sueldo: <strong> {{nombreMayorSueldo}} - {{sueldoMayor}}</strong>
+    </p>
+  </div>
+  <div class="col-6">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let empleado of empleados">
+        <strong>Nombre:</strong> {{empleado.nombre}},
+        <strong>Edad:</strong> {{empleado.edad}} <br>
+        <strong>Email:</strong> {{empleado.email}},
+        <strong>Teléfono:</strong> {{empleado.telefono}} <br>
+        <strong>Sueldo:</strong> {{empleado.sueldo}}
+      </li>
+    </ul>
+  </div>
+</div>
